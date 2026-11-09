@@ -84,6 +84,10 @@
   filter: drop-shadow(0 0 10px rgba(97, 218, 251, 0.8));
 }
 
+.navbar__items {
+  gap: 0.6rem;
+}
+
 .navbar__items .navbar__link {
   display: inline-flex;
   align-items: center;
@@ -93,7 +97,7 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   border-radius: 6px;
-  padding: 0.35rem 0.7rem;
+  padding: 0.4rem 0.8rem;
   transition: all 0.15s;
 }
 
@@ -104,7 +108,7 @@
   flex-shrink: 0;
   width: 1.15rem;
   height: 1.15rem;
-  margin-right: 0.5rem;
+  margin-right: 0.6rem;
   vertical-align: middle;
   background: var(--rn-transition-gradient);
   -webkit-mask-position: center;
@@ -145,6 +149,7 @@
 /* Toggle sol/lua: feedback de press temático */
 .navbar .clean-btn {
   border-radius: 50%;
+  margin: 0 0.25rem;
   color: var(--rn-react-cyan);
   transition:
     transform 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.4),
