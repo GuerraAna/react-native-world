@@ -1,5 +1,9 @@
 import {useMemo, useRef} from 'react';
-import type {PointerEvent as ReactPointerEvent, ReactNode} from 'react';
+import type {
+  CSSProperties,
+  PointerEvent as ReactPointerEvent,
+  ReactNode,
+} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -94,7 +98,7 @@ function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   const logoSrc = useBaseUrl('img/logo.svg');
   const heroRef = useRef<HTMLElement>(null);
-  const raysRef = useRef<HTMLDivElement>(null);
+  const driftRef = useRef<HTMLDivElement>(null);
   const logoRef = useRef<HTMLDivElement>(null);
 
   const rays = useMemo(
@@ -109,6 +113,7 @@ function HomepageHeader() {
           opacity: 0.15 + ((i * 53) % 60) / 100,
           // transição de cor seguindo o ângulo: verde -> ciano
           hue: 150 + (angle / 360) * 50,
+          twinkleDelay: -((i % 7) * 0.55),
         };
       }),
     [],
@@ -119,8 +124,8 @@ function HomepageHeader() {
     if (!rect) return;
     const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
     const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
-    if (raysRef.current) {
-      raysRef.current.style.transform = `translate(${x * 16}px, ${y * 16}px) rotate(${x * 10}deg)`;
+    if (driftRef.current) {
+      driftRef.current.style.transform = `translate(${x * 18}px, ${y * 18}px) rotate(${x * 8}deg)`;
     }
     if (logoRef.current) {
       logoRef.current.style.transform = `translate(${x * 10}px, ${y * 10}px) rotate(${x * -3}deg)`;
@@ -128,7 +133,7 @@ function HomepageHeader() {
   };
 
   const handlePointerLeave = () => {
-    if (raysRef.current) raysRef.current.style.transform = '';
+    if (driftRef.current) driftRef.current.style.transform = '';
     if (logoRef.current) logoRef.current.style.transform = '';
   };
 
@@ -152,20 +157,28 @@ function HomepageHeader() {
         </div>
 
         <div className={styles.burstWrap} aria-hidden="true">
-          <div ref={raysRef} className={styles.rays}>
-            {rays.map((ray, i) => (
-              <span
-                key={i}
-                className={styles.ray}
-                style={{
-                  height: ray.length,
-                  width: ray.width,
-                  opacity: ray.opacity,
-                  transform: `rotate(${ray.angle}deg)`,
-                  background: `linear-gradient(to top, transparent, hsl(${ray.hue} 85% 65%))`,
-                }}
-              />
-            ))}
+          <div ref={driftRef} className={styles.drift}>
+            <div className={clsx(styles.ring, styles.ringOuter)} />
+            <div className={clsx(styles.ring, styles.ringInner)} />
+            <div className={styles.rays}>
+              {rays.map((ray, i) => (
+                <span
+                  key={i}
+                  className={styles.ray}
+                  style={
+                    {
+                      height: ray.length,
+                      width: ray.width,
+                      opacity: ray.opacity,
+                      transform: `rotate(${ray.angle}deg)`,
+                      background: `linear-gradient(to top, transparent, hsl(${ray.hue} 85% 65%))`,
+                      animationDelay: `${ray.twinkleDelay}s`,
+                      '--ray-hue': ray.hue,
+                    } as CSSProperties
+                  }
+                />
+              ))}
+            </div>
           </div>
           <div ref={logoRef} className={styles.heroLogo}>
             <img src={logoSrc} alt="" />

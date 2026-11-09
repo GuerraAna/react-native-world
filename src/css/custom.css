@@ -173,6 +173,15 @@
   outline: none;
 }
 
+/* Ícones extras da busca (lupa, hints ⌘K) — dispensáveis, input limpo */
+.navbar__search > svg {
+  display: none;
+}
+
+.navbar__search kbd {
+  display: none;
+}
+
 /* Modal de resultados da busca no tema escuro do site */
 :root {
   --search-local-modal-background: #18222c;
