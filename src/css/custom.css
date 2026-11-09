@@ -142,6 +142,43 @@
   color: var(--rn-react-cyan);
 }
 
+/* Toggle sol/lua: feedback de press temático */
+.navbar .clean-btn {
+  border-radius: 50%;
+  color: var(--rn-react-cyan);
+  transition:
+    transform 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.4),
+    background-color 0.15s,
+    box-shadow 0.15s,
+    outline-color 0.15s;
+}
+
+.navbar .clean-btn:hover {
+  background: rgba(97, 218, 251, 0.15);
+  transform: rotate(20deg) scale(1.1);
+}
+
+.navbar .clean-btn:hover svg {
+  filter: drop-shadow(0 0 5px rgba(97, 218, 251, 0.75));
+}
+
+/* Press: giro completo estilo "moeda" */
+.navbar .clean-btn:active {
+  background: rgba(61, 220, 132, 0.22);
+  transform: rotate(360deg) scale(0.9);
+}
+
+/* Focus ring temático (substitui o anel branco padrão) */
+.navbar .clean-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar .clean-btn:focus-visible {
+  outline: 2px solid var(--rn-react-cyan);
+  outline-offset: 2px;
+}
+
 /* Menu lateral mobile: cor base legível
    (a sidebar fica dentro da .navbar e herdava color: #fff) */
 .navbar-sidebar {
