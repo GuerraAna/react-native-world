@@ -445,3 +445,11 @@
   font-size: 0.95rem;
   line-height: 2;
 }
+
+/* Divider em gradiente entre as colunas e o copyright */
+.footer__bottom {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid transparent;
+  border-image: var(--rn-transition-gradient) 1;
+}
