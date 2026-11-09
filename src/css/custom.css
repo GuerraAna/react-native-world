@@ -446,6 +446,14 @@
   line-height: 2;
 }
 
+/* Footer alinhado à coluna de conteúdo nas páginas de doc (estilo Expo):
+   a sidebar continua até o fim da tela e o footer fica à direita dela */
+@media (min-width: 997px) {
+  body:has(.theme-doc-sidebar-container) .footer {
+    margin-left: var(--doc-sidebar-width);
+  }
+}
+
 /* Divider em gradiente entre as colunas e o copyright */
 .footer__bottom {
   margin-top: 2rem;
