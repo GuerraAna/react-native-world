@@ -1,0 +1,10 @@
+{
+  "label": "Ciclo de Vida e Estado",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "title": "Ciclo de Vida e Estado",
+    "description": "De Activity/Fragment lifecycle, ViewModel e Flow para hooks e gerenciamento de estado no React.",
+    "slug": "/estado"
+  }
+}

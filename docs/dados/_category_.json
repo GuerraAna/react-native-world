@@ -1,0 +1,10 @@
+{
+  "label": "Dados",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "title": "Dados",
+    "description": "Rede, serialização e persistência: Retrofit, Room e SharedPreferences do outro lado.",
+    "slug": "/dados"
+  }
+}

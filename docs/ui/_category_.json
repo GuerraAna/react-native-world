@@ -1,0 +1,10 @@
+{
+  "label": "UI e Layout",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "title": "UI e Layout",
+    "description": "De Views/XML e Jetpack Compose para componentes React Native e Flexbox.",
+    "slug": "/ui"
+  }
+}

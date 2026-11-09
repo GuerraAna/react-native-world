@@ -1,0 +1,10 @@
+{
+  "label": "Mundo Nativo",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "title": "Mundo Nativo",
+    "description": "Onde seu conhecimento de Kotlin brilha: módulos nativos, Gradle e a pasta android/.",
+    "slug": "/nativo"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "label": "Fundamentos",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "title": "Fundamentos",
+    "description": "Como o React Native funciona por baixo do capô, para quem entende de JNI, Gradle e do build do Android.",
+    "slug": "/fundamentos"
+  }
+}

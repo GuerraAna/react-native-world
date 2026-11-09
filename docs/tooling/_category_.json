@@ -1,0 +1,10 @@
+{
+  "label": "Tooling e Qualidade",
+  "position": 9,
+  "link": {
+    "type": "generated-index",
+    "title": "Tooling e Qualidade",
+    "description": "Debug, testes e código específico por plataforma.",
+    "slug": "/tooling"
+  }
+}
