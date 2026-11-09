@@ -425,6 +425,11 @@
   color: var(--ifm-color-primary);
 }
 
+/* "Próximo nível" encostado na borda direita */
+.pagination-nav__item--next {
+  justify-self: end;
+}
+
 /* ============ Footer ============ */
 
 .footer--dark {
