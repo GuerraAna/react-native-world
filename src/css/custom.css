@@ -190,19 +190,22 @@
   font-weight: 600;
 }
 
+/* Faixa de marca da sidebar: mini navbar consistente nos dois temas */
+.navbar-sidebar__brand {
+  background: linear-gradient(
+    90deg,
+    var(--rn-android-dark) 0%,
+    var(--rn-react-dark) 100%
+  );
+  border-bottom: 3px solid transparent;
+  border-image: var(--rn-transition-gradient) 1;
+}
+
 .navbar-sidebar__close {
-  color: var(--ifm-color-emphasis-700);
+  color: var(--rn-react-cyan);
 }
 
-/* Título dentro da sidebar: gradiente tem baixo contraste no claro */
-.navbar-sidebar .navbar__title {
-  background: none;
-  -webkit-background-clip: initial;
-  background-clip: initial;
-  color: var(--ifm-color-emphasis-900);
-}
-
-/* Ícones no fundo claro da sidebar: cor sólida legível por tema */
+/* Ícones no fundo claro dos itens: cor sólida legível por tema */
 .navbar-sidebar .nav-icon::before {
   background: var(--ifm-color-primary);
 }
