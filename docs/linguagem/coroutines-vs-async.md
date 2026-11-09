@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 title: Coroutines vs Async/Await
+sidebar_label: 🔀 Coroutines vs Async
 description: suspend, Flow, Promise e async/await
 ---
 

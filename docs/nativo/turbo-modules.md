@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: TurboModules em Kotlin
+sidebar_label: 🤖 TurboModules
 description: Escrevendo módulos nativos chamados pelo JS — seu superpoder
 ---
 

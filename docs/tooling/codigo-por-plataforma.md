@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 title: Código Específico por Plataforma
+sidebar_label: 📱 Por Plataforma
 description: Platform.OS, arquivos .android.tsx e permissões
 ---
 

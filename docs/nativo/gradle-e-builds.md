@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 title: Gradle e a pasta android/
+sidebar_label: 🐘 Gradle e Builds
 description: O que continua igual e o que muda no build Android
 ---
 

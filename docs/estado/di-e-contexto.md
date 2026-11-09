@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 title: Injeção de Dependências e Context
+sidebar_label: 💉 DI e Context
 description: Hilt/Koin vs Context API e providers
 ---
 

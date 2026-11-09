@@ -2,6 +2,7 @@
 sidebar_position: 1
 slug: /intro
 title: Introdução
+sidebar_label: 👋 Introdução
 description: Ponto de partida do guia React Native para devs Android/Kotlin
 ---
 

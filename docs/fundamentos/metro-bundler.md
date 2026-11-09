@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 title: Metro Bundler
+sidebar_label: 🚇 Metro Bundler
 description: O servidor de build do React Native
 ---
 

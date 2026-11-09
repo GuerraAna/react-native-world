@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 title: Expo vs React Native CLI
+sidebar_label: ⚔️ Expo vs RN CLI
 description: Os dois caminhos para criar um app RN
 ---
 

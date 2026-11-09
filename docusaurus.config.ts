@@ -55,11 +55,13 @@ const config: Config = {
           sidebarId: 'docs',
           position: 'left',
           label: 'Documentação',
+          className: 'nav-icon nav-icon-docs',
         },
         {
           href: 'https://github.com/GuerraAna/react-native-world',
           label: 'GitHub',
           position: 'right',
+          className: 'nav-icon nav-icon-github',
         },
       ],
     },

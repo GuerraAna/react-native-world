@@ -1,6 +1,7 @@
 ---
 sidebar_position: 4
 title: Listas
+sidebar_label: 📜 Listas
 description: RecyclerView/Adapter vs FlatList/FlashList
 ---
 

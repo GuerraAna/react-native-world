@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 title: Flexbox (Yoga)
+sidebar_label: 📦 Flexbox (Yoga)
 description: O sistema de layout do RN para quem conhece LinearLayout/ConstraintLayout
 ---
 

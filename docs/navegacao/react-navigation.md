@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: React Navigation
+sidebar_label: 🧭 React Navigation
 description: Intents, NavGraph e back stack vs stack/tab/drawer navigators
 ---
 

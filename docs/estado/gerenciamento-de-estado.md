@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 title: Gerenciamento de Estado
+sidebar_label: 📊 Estado
 description: ViewModel, LiveData, StateFlow vs hooks e stores
 ---
 

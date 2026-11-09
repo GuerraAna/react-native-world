@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: "Arquitetura: Bridge vs Nova Arquitetura"
+sidebar_label: 🌉 Arquitetura
 description: Como o JavaScript se comunica com o código nativo
 ---
 

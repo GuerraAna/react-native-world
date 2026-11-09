@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 title: Armazenamento Local
+sidebar_label: 🗄️ Armazenamento
 description: SharedPreferences, DataStore e Room vs AsyncStorage, MMKV e SQLite
 ---
 

@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 title: Padrões e Estruturas
+sidebar_label: 🧩 Padrões e Estruturas
 description: sealed classes, when, extension functions e coleções
 ---
 

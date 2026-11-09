@@ -1,0 +1,30 @@
+{
+  "theme.docs.paginator.previous": {
+    "message": "Nível anterior",
+    "description": "The label for the button to go to the previous docs page"
+  },
+  "theme.docs.paginator.next": {
+    "message": "Próximo nível",
+    "description": "The label for the button to go to the next docs page"
+  },
+  "theme.docs.toc.title": {
+    "message": "Nesta página",
+    "description": "The label for the table of contents"
+  },
+  "theme.common.editThisPage": {
+    "message": "Editar esta página",
+    "description": "The link label to edit the current page"
+  },
+  "theme.docs.editThisPage": {
+    "message": "Editar esta página",
+    "description": "The link label to edit the current page"
+  },
+  "theme.common.next": {
+    "message": "Próximo",
+    "description": "Label for the next button"
+  },
+  "theme.common.previous": {
+    "message": "Anterior",
+    "description": "Label for the previous button"
+  }
+}

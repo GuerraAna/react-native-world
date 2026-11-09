@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 title: Estilos e StyleSheet
+sidebar_label: 💅 Estilos e StyleSheet
 description: styles.xml, themes e dimens vs StyleSheet.create
 ---
 

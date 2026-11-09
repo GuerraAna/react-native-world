@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: Ciclo de Vida
+sidebar_label: ♻️ Ciclo de Vida
 description: onCreate/onResume/onDestroy vs mount/useEffect/AppState
 ---
 

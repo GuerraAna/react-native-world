@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 title: Testes
+sidebar_label: 🧪 Testes
 description: JUnit/Espresso/Robolectric vs Jest/RNTL/Maestro
 ---
 

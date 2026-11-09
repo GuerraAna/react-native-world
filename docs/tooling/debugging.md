@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: Debugging
+sidebar_label: 🐛 Debugging
 description: Logcat, breakpoints e profiling no mundo RN
 ---
 

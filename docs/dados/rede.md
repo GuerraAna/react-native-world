@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: Rede e HTTP
+sidebar_label: 🌐 Rede e HTTP
 description: Retrofit/OkHttp/Moshi vs fetch/axios/Zod
 ---
 

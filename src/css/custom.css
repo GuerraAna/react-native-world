@@ -1,11 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 :root {
-  --ifm-color-primary: #149eca;
-  --ifm-color-primary-dark: #128eb3;
-  --ifm-color-primary-darker: #1186a9;
-  --ifm-color-primary-darkest: #0e6f8b;
-  --ifm-color-primary-light: #28a9d1;
-  --ifm-color-primary-lighter: #35afd4;
-  --ifm-color-primary-lightest: #53bcda;
+  /* Paleta de transição: Android nativo → React Native
+     Verde do logo Android (#3DDC84) → Ciano do logo React (#61DAFB) */
+  --rn-android-green: #3ddc84;
+  --rn-android-dark: #073042;
+  --rn-react-cyan: #61dafb;
+  --rn-react-dark: #20232a;
+  --rn-transition-gradient: linear-gradient(
+    90deg,
+    var(--rn-android-green) 0%,
+    var(--rn-react-cyan) 100%
+  );
+  --rn-font-pixel: 'Press Start 2P', 'Courier New', monospace;
+
+  /* Primária: teal ponto médio entre as duas marcas */
+  --ifm-color-primary: #0f9d8a;
+  --ifm-color-primary-dark: #0e8d7c;
+  --ifm-color-primary-darker: #0d8575;
+  --ifm-color-primary-darkest: #0a6e61;
+  --ifm-color-primary-light: #10ab96;
+  --ifm-color-primary-lighter: #12b19b;
+  --ifm-color-primary-lightest: #1cc4ac;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
@@ -18,5 +34,323 @@
   --ifm-color-primary-light: #81e2fc;
   --ifm-color-primary-lighter: #92e7fc;
   --ifm-color-primary-lightest: #b5effd;
+  --ifm-background-color: #20232a;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* ============ Navbar: HUD do jogo ============ */
+
+.navbar {
+  background: linear-gradient(
+    90deg,
+    var(--rn-android-dark) 0%,
+    var(--rn-react-dark) 100%
+  );
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+/* Linha de transição Android → React sob a navbar */
+.navbar::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: var(--rn-transition-gradient);
+}
+
+.navbar__title {
+  font-family: var(--rn-font-pixel);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  background: var(--rn-transition-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Logo: gira como moeda coletável no hover */
+.navbar__logo img {
+  transition:
+    transform 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.4),
+    filter 0.3s;
+  filter: drop-shadow(0 0 5px rgba(97, 218, 251, 0.45));
+}
+
+.navbar__logo:hover img {
+  transform: rotate(360deg) scale(1.12);
+  filter: drop-shadow(0 0 10px rgba(97, 218, 251, 0.8));
+}
+
+.navbar__items .navbar__link {
+  display: inline-flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 6px;
+  padding: 0.35rem 0.7rem;
+  transition: all 0.15s;
+}
+
+/* Ícones em gradiente Android → React via mask */
+.nav-icon::before {
+  content: '';
+  display: inline-block;
+  flex-shrink: 0;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  background: var(--rn-transition-gradient);
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  transition: transform 0.25s cubic-bezier(0.2, 0.9, 0.3, 1.4);
+}
+
+.nav-icon:hover::before {
+  transform: rotate(-10deg) scale(1.2);
+}
+
+/* Grimório (livro de magia) — book-open + sparkles */
+.nav-icon-docs::before {
+  -webkit-mask-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 620'%3E%3Cg transform='translate(0 140)'%3E%3Cpath d='M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5l0-377.4c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8L0 454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5l0-370.3c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11L304 456c0 11.4 11.7 19.3 22.4 15.5z'/%3E%3C/g%3E%3Cpath d='M480 30 Q483 67 520 70 Q483 73 480 110 Q477 73 440 70 Q477 67 480 30 Z'/%3E%3Cpath d='M150 68 Q152 88 172 90 Q152 92 150 112 Q148 92 128 90 Q148 88 150 68 Z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 620'%3E%3Cg transform='translate(0 140)'%3E%3Cpath d='M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5l0-377.4c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8L0 454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5l0-370.3c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11L304 456c0 11.4 11.7 19.3 22.4 15.5z'/%3E%3C/g%3E%3Cpath d='M480 30 Q483 67 520 70 Q483 73 480 110 Q477 73 440 70 Q477 67 480 30 Z'/%3E%3Cpath d='M150 68 Q152 88 172 90 Q152 92 150 112 Q148 92 128 90 Q148 88 150 68 Z'/%3E%3C/svg%3E");
+}
+
+/* Octocat do GitHub */
+.nav-icon-github::before {
+  -webkit-mask-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E");
+}
+
+.navbar__items .navbar__link:hover,
+.navbar__items .navbar__link--active {
+  color: var(--rn-react-cyan);
+  background: rgba(97, 218, 251, 0.12);
+}
+
+.navbar__toggle {
+  color: var(--rn-react-cyan);
+}
+
+/* Menu lateral mobile: cor base legível
+   (a sidebar fica dentro da .navbar e herdava color: #fff) */
+.navbar-sidebar {
+  color: var(--ifm-font-color-base);
+}
+
+.navbar-sidebar__back {
+  color: var(--ifm-color-emphasis-800);
+  font-weight: 600;
+}
+
+.navbar-sidebar__close {
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Título dentro da sidebar: gradiente tem baixo contraste no claro */
+.navbar-sidebar .navbar__title {
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  color: var(--ifm-color-emphasis-900);
+}
+
+/* Ícones no fundo claro da sidebar: cor sólida legível por tema */
+.navbar-sidebar .nav-icon::before {
+  background: var(--ifm-color-primary);
+}
+
+/* Links da navbar dentro da sidebar: cor legível por tema */
+.navbar-sidebar .navbar__link {
+  color: var(--ifm-navbar-link-color);
+}
+
+/* Menu lateral mobile: mais respiro nos itens */
+.navbar-sidebar .navbar__link,
+.navbar-sidebar .menu__link {
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.navbar-sidebar__item {
+  padding: 0.15rem 0;
+}
+
+/* ============ Botões: sensação de "pressionar" ============ */
+
+.button {
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.28);
+  transition:
+    transform 0.1s,
+    box-shadow 0.1s,
+    filter 0.15s;
+}
+
+.button:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.28);
+}
+
+/* ============ Admonitions: quest/achievement cards ============ */
+
+.theme-admonition {
+  border-left-width: 5px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='dark'] .theme-admonition {
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.35);
+}
+
+.admonition-heading {
+  font-family: var(--rn-font-pixel);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ============ Tabelas de mapeamento: stat sheets ============ */
+
+.theme-doc-markdown thead tr {
+  background: linear-gradient(
+    90deg,
+    rgba(61, 220, 132, 0.22),
+    rgba(97, 218, 251, 0.22)
+  );
+}
+
+.theme-doc-markdown th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.theme-doc-markdown table {
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.06);
+}
+
+[data-theme='dark'] .theme-doc-markdown table {
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* ============ Headings dos docs ============ */
+
+.theme-doc-markdown h2 {
+  padding-bottom: 0.35rem;
+  border-bottom: 3px solid transparent;
+  border-image: var(--rn-transition-gradient) 1;
+}
+
+/* ============ Sidebar ============ */
+
+.menu__link {
+  border-radius: 8px;
+}
+
+.menu__link--sublist {
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+/* Item ativo: pill de gradiente no lugar de borda cortada */
+.menu__link--active {
+  position: relative;
+  font-weight: 700;
+}
+
+.menu__link--active::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 60%;
+  border-radius: 2px;
+  background: var(--rn-transition-gradient);
+}
+
+/* ============ Checklists "O que anotar depois" ============ */
+
+.contains-task-list input[type='checkbox'] {
+  accent-color: var(--ifm-color-primary);
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+/* ============ Tabs Kotlin | TypeScript ============ */
+
+.tabs__item {
+  font-weight: 600;
+}
+
+.tabs__item--active {
+  border-bottom-width: 3px;
+}
+
+/* ============ Code blocks ============ */
+
+.theme-code-block {
+  border: 1px solid rgba(97, 218, 251, 0.18);
+  border-radius: 10px;
+}
+
+/* ============ Paginação: "nível anterior / próximo nível" ============ */
+
+.pagination-nav__link {
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-radius: 12px;
+  transition:
+    transform 0.15s,
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--rn-react-cyan);
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 0 rgba(97, 218, 251, 0.3);
+}
+
+.pagination-nav__sublabel {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ifm-color-primary);
+}
+
+/* ============ Footer ============ */
+
+.footer--dark {
+  --ifm-footer-background-color: var(--rn-react-dark);
+  --ifm-footer-link-color: rgba(255, 255, 255, 0.85);
+}
+
+.footer__title {
+  font-family: var(--rn-font-pixel);
+  font-size: 0.7rem;
+  line-height: 1.8;
+  letter-spacing: 0.12em;
+  color: var(--rn-react-cyan);
+  margin-bottom: 0.9rem;
+}
+
+.footer__link-item {
+  font-size: 0.95rem;
+  line-height: 2;
 }

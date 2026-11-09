@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: Componentes Básicos
+sidebar_label: 🧱 Componentes Básicos
 description: Tabela de mapeamento View → componente RN
 ---
 

@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: Tipos e Null Safety
+sidebar_label: 🛡️ Tipos e Null Safety
 description: data class, interfaces e null safety nos dois mundos
 ---
 
