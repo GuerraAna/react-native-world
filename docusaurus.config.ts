@@ -42,7 +42,28 @@ const config: Config = {
     ],
   ],
 
+  themes: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        indexBlog: false,
+        indexDocs: true,
+        indexPages: true,
+        docsRouteBasePath: '/docs',
+        language: ['pt', 'en'],
+        highlightSearchTermsOnTargetPage: true,
+        searchBarPosition: 'right',
+        searchBarShortcutHint: true,
+      },
+    ],
+  ],
+
   themeConfig: {
+    colorMode: {
+      respectPrefersColorScheme: true,
+      disableSwitch: true,
+    },
     navbar: {
       title: 'RN World',
       logo: {
@@ -62,6 +83,10 @@ const config: Config = {
           label: 'GitHub',
           position: 'right',
           className: 'nav-icon nav-icon-github',
+        },
+        {
+          type: 'custom-colorModeDropdown',
+          position: 'right',
         },
       ],
     },

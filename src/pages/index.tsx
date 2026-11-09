@@ -1,6 +1,8 @@
-import type {ReactNode} from 'react';
+import {useMemo, useRef} from 'react';
+import type {PointerEvent as ReactPointerEvent, ReactNode} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
@@ -74,6 +76,8 @@ const segments: Segment[] = [
   },
 ];
 
+const RAY_COUNT = 72;
+
 function SegmentCard({level, title, to, androidEquivalent, description}: Segment) {
   return (
     <Link to={to} className={styles.card}>
@@ -88,19 +92,84 @@ function SegmentCard({level, title, to, androidEquivalent, description}: Segment
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
+  const logoSrc = useBaseUrl('img/logo.svg');
+  const heroRef = useRef<HTMLElement>(null);
+  const raysRef = useRef<HTMLDivElement>(null);
+  const logoRef = useRef<HTMLDivElement>(null);
+
+  const rays = useMemo(
+    () =>
+      Array.from({length: RAY_COUNT}, (_, i) => {
+        const angle = (360 / RAY_COUNT) * i;
+        return {
+          angle,
+          // comprimento e opacidade variando de forma determinística
+          length: 70 + ((i * 37) % 110),
+          width: i % 6 === 0 ? 2 : 1,
+          opacity: 0.15 + ((i * 53) % 60) / 100,
+          // transição de cor seguindo o ângulo: verde -> ciano
+          hue: 150 + (angle / 360) * 50,
+        };
+      }),
+    [],
+  );
+
+  const handlePointerMove = (e: ReactPointerEvent<HTMLElement>) => {
+    const rect = heroRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+    const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+    if (raysRef.current) {
+      raysRef.current.style.transform = `translate(${x * 16}px, ${y * 16}px) rotate(${x * 10}deg)`;
+    }
+    if (logoRef.current) {
+      logoRef.current.style.transform = `translate(${x * 10}px, ${y * 10}px) rotate(${x * -3}deg)`;
+    }
+  };
+
+  const handlePointerLeave = () => {
+    if (raysRef.current) raysRef.current.style.transform = '';
+    if (logoRef.current) logoRef.current.style.transform = '';
+  };
+
   return (
-    <header className={clsx('hero', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Começar a ler
-          </Link>
+    <header
+      ref={heroRef}
+      className={clsx('hero', styles.heroBanner)}
+      onPointerMove={handlePointerMove}
+      onPointerLeave={handlePointerLeave}>
+      <div className={clsx('container', styles.heroGrid)}>
+        <div className={styles.heroText}>
+          <Heading as="h1" className="hero__title">
+            {siteConfig.title}
+          </Heading>
+          <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <div className={styles.buttons}>
+            <Link className="button button--secondary button--lg" to="/docs/intro">
+              Começar a ler
+            </Link>
+          </div>
+        </div>
+
+        <div className={styles.burstWrap} aria-hidden="true">
+          <div ref={raysRef} className={styles.rays}>
+            {rays.map((ray, i) => (
+              <span
+                key={i}
+                className={styles.ray}
+                style={{
+                  height: ray.length,
+                  width: ray.width,
+                  opacity: ray.opacity,
+                  transform: `rotate(${ray.angle}deg)`,
+                  background: `linear-gradient(to top, transparent, hsl(${ray.hue} 85% 65%))`,
+                }}
+              />
+            ))}
+          </div>
+          <div ref={logoRef} className={styles.heroLogo}>
+            <img src={logoSrc} alt="" />
+          </div>
         </div>
       </div>
     </header>

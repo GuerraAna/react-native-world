@@ -146,6 +146,43 @@
   color: var(--rn-react-cyan);
 }
 
+/* Search bar local: combina com a navbar escura */
+.navbar__search-input {
+  background: rgba(97, 218, 251, 0.08);
+  border: 1px solid rgba(97, 218, 251, 0.35);
+  border-radius: 8px;
+  color: #fff;
+  transition:
+    border-color 0.15s,
+    background-color 0.15s,
+    box-shadow 0.15s;
+}
+
+.navbar__search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar__search-input:hover {
+  border-color: rgba(97, 218, 251, 0.6);
+}
+
+.navbar__search-input:focus {
+  background: rgba(97, 218, 251, 0.14);
+  border-color: var(--rn-react-cyan);
+  box-shadow: 0 0 0 3px rgba(97, 218, 251, 0.2);
+  outline: none;
+}
+
+/* Modal de resultados da busca no tema escuro do site */
+:root {
+  --search-local-modal-background: #18222c;
+  --search-local-muted-color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme='dark'] {
+  --search-local-modal-background: #1b2129;
+}
+
 /* Toggle sol/lua: feedback de press temático */
 .navbar .clean-btn {
   border-radius: 50%;

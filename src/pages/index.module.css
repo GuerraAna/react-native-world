@@ -1,10 +1,22 @@
 .heroBanner {
   padding: 4rem 0;
-  text-align: center;
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, #073042 0%, #20232a 100%);
   color: #fff;
+}
+
+.heroGrid {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.heroText {
+  text-align: left;
+  max-width: 32rem;
 }
 
 .heroBanner::before {
@@ -27,10 +39,6 @@
   background: radial-gradient(circle, rgba(97, 218, 251, 0.3), transparent 70%);
 }
 
-.heroBanner :global(.container) {
-  position: relative;
-}
-
 .heroBanner :global(.hero__title) {
   font-family: var(--rn-font-pixel);
   font-size: 1.6rem;
@@ -43,6 +51,11 @@
 
 .heroBanner :global(.hero__subtitle) {
   color: rgba(255, 255, 255, 0.85);
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
 }
 
 .buttons :global(.button) {
@@ -68,6 +81,90 @@
   }
   50% {
     box-shadow: 0 4px 0 rgba(0, 0, 0, 0.28), 0 0 18px rgba(97, 218, 251, 0.55);
+  }
+}
+
+/* ============ Burst radial atrás do logo ============ */
+
+.burstWrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 420px;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rays {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.35s ease-out;
+  will-change: transform;
+}
+
+.ray {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: 50% 0;
+  border-radius: 2px;
+  margin-left: -1px;
+}
+
+.heroLogo {
+  position: relative;
+  z-index: 1;
+  width: 112px;
+  height: 112px;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(97, 218, 251, 0.45);
+  box-shadow:
+    0 0 50px rgba(97, 218, 251, 0.35),
+    inset 0 0 25px rgba(61, 220, 132, 0.15);
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+
+.heroLogo img {
+  width: 78px;
+  height: 78px;
+}
+
+@media (max-width: 996px) {
+  .heroGrid {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .heroText {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .burstWrap {
+    width: 280px;
+    height: 280px;
+  }
+
+  .heroLogo {
+    width: 88px;
+    height: 88px;
+    border-radius: 22px;
+  }
+
+  .heroLogo img {
+    width: 60px;
+    height: 60px;
   }
 }
 
