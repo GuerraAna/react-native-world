@@ -64,7 +64,7 @@ export default function ColorModeDropdown(): ReactNode {
   const current = OPTIONS.find((o) => o.value === colorModeChoice) ?? OPTIONS[2];
 
   return (
-    <div ref={rootRef} className={styles.dropdown}>
+    <div ref={rootRef} className={clsx('navbar__item', styles.dropdown)}>
       <button
         type="button"
         className={styles.trigger}

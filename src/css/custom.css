@@ -94,15 +94,16 @@ body {
   gap: 0.6rem;
 }
 
-/* Faixa apertada (996–1200px): links mais compactos para não estourar */
+/* Abaixo de 1200px os itens saem da topbar e migram para o menu hamburger.
+   O drawer mobile (.navbar-sidebar) funciona em qualquer largura — basta
+   exibir o toggle. A busca permanece na topbar pois ainda cabe. */
 @media (max-width: 1200px) {
-  .navbar__items {
-    gap: 0.35rem;
+  .navbar__items .navbar__item {
+    display: none;
   }
 
-  .navbar__items .navbar__link {
-    padding: 0.4rem 0.55rem;
-    font-size: 0.72rem;
+  .navbar__toggle {
+    display: inherit;
   }
 
   .navbar__search {
