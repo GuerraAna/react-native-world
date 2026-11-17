@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+/* Proteção global contra scroll horizontal (clip não quebra position:sticky) */
+html,
+body {
+  overflow-x: clip;
+}
+
 :root {
   /* Paleta de transição: Android nativo → React Native
      Verde do logo Android (#3DDC84) → Ciano do logo React (#61DAFB) */
@@ -86,6 +92,23 @@
 
 .navbar__items {
   gap: 0.6rem;
+}
+
+/* Faixa apertada (996–1200px): links mais compactos para não estourar */
+@media (max-width: 1200px) {
+  .navbar__items {
+    gap: 0.35rem;
+  }
+
+  .navbar__items .navbar__link {
+    padding: 0.4rem 0.55rem;
+    font-size: 0.72rem;
+  }
+
+  .navbar__search {
+    min-width: 0;
+    flex-shrink: 1;
+  }
 }
 
 .navbar__items .navbar__link {
@@ -329,6 +352,9 @@
 }
 
 .theme-doc-markdown table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.06);
 }
 
@@ -386,8 +412,13 @@
 
 /* ============ Tabs Kotlin | TypeScript ============ */
 
+.tabs {
+  overflow-x: auto;
+}
+
 .tabs__item {
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .tabs__item--active {

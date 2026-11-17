@@ -167,7 +167,7 @@ function HomepageHeader() {
                   className={styles.ray}
                   style={
                     {
-                      height: ray.length,
+                      height: `${ray.length / 4.2}%`,
                       width: ray.width,
                       opacity: ray.opacity,
                       transform: `rotate(${ray.angle}deg)`,

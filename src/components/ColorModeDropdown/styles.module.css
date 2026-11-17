@@ -128,8 +128,8 @@
   height: 0.9rem;
 }
 
-/* Label some em telas estreitas — ícone continua */
-@media (max-width: 640px) {
+/* Label some na faixa apertada do navbar (996–1200px) — ícone continua */
+@media (max-width: 1200px) {
   .triggerLabel {
     display: none;
   }
