@@ -83,3 +83,8 @@ Métodos chamados do JS rodam na **native modules thread**, não na main — mes
 - [ ] Fabric components: expor uma `View` nativa customizada
 - [ ] Eventos nativo→JS (DeviceEventEmitter vs Flow)
 - [ ] Empacotar como lib (`create-react-native-library`)
+
+## Referências oficiais
+
+- [React Native — Turbo Native Modules](https://reactnative.dev/docs/turbo-native-modules-introduction)
+- [React Native — Native Modules Android](https://reactnative.dev/docs/native-modules-android)

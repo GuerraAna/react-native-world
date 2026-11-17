@@ -88,3 +88,9 @@ controller.abort();
 - [ ] `Promise.all` ≈ `awaitAll`/`async` + `await`
 - [ ] Flow → equivalente mais próximo (RxJS, ou padrões com hooks)
 - [ ] Event loop do JS vs despachantes de coroutines
+
+## Referências oficiais
+
+- [Kotlin — Coroutines overview](https://kotlinlang.org/docs/coroutines-overview.html)
+- [MDN — async function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+- [MDN — Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

@@ -97,3 +97,8 @@ Apps nativos não se preocupam com "ser encontrado" — a Play Store indexa por 
 - [ ] Streaming SSR — partes da página chegam prontas em sequência
 - [ ] `metadata` export / `generateMetadata` — title/description por página
 - [ ] Quando ISR revalida: primeiro request após `revalidate` dispara rebuild em background
+
+## Referências oficiais
+
+- [Next.js — Rendering](https://nextjs.org/docs/app/building-your-application/rendering)
+- [Next.js — Metadata](https://nextjs.org/docs/app/building-your-application/optimizing/metadata)

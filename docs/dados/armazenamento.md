@@ -7,6 +7,8 @@ description: SharedPreferences, DataStore e Room vs AsyncStorage, MMKV e SQLite
 
 # Armazenamento Local
 
+Dados que precisam sobreviver ao fechamento do app: de preferências simples (key-value) até banco de dados completo. O mapeamento segue a mesma divisão do Android.
+
 ## Mapeamento
 
 | Android | React Native |
@@ -36,7 +38,7 @@ const token = storage.getString('token');
 ```
 
 :::tip MMKV é o queridinho
-Síncrono (dá pra ler no render sem flash), muito mais rápido que AsyncStorage, e é a mesma lib que apps como o WeChat usam. Funciona com TursoModules — bom candidato para sua seção nativa.
+Síncrono (dá pra ler no render sem flash), muito mais rápido que AsyncStorage, e é a mesma lib que apps como o WeChat usam. Funciona com TurboModules — bom candidato para sua seção nativa.
 :::
 
 ## Banco de dados
@@ -53,3 +55,9 @@ Síncrono (dá pra ler no render sem flash), muito mais rápido que AsyncStorage
 
 - [ ] Migrations: SQLite version vs Room migrations
 - [ ] Persistir stores: `zustand/middleware persist` + MMKV
+
+## Referências oficiais
+
+- [AsyncStorage — Documentação](https://react-native-async-storage.github.io/async-storage/)
+- [react-native-mmkv](https://github.com/mrousavy/react-native-mmkv)
+- [Expo — SecureStore](https://docs.expo.dev/versions/latest/sdk/securestore/)

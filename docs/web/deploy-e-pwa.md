@@ -120,3 +120,9 @@ Open Graph       → card bonito ao compartilhar link
 - [ ] Web Share API ≈ `Intent.ACTION_SEND`
 - [ ] Push notifications web vs FCM (Web Push Protocol)
 - [ ] Lighthouse audit — o "pre-launch report" da web
+
+## Referências oficiais
+
+- [Next.js — Deploying](https://nextjs.org/docs/app/building-your-application/deploying)
+- [web.dev — Learn PWA](https://web.dev/learn/pwa)
+- [Expo — Publish websites](https://docs.expo.dev/distribution/publishing-websites/)

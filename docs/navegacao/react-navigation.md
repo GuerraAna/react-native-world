@@ -90,3 +90,9 @@ Nesting  → Tab dentro de Stack ≈ nested nav graphs
 - [ ] Expo Router / file-based routing (≈ convenção sobre configuração)
 - [ ] `useFocusEffect` para "onResume por tela"
 - [ ] Modal screens e presentation style
+
+## Referências oficiais
+
+- [React Navigation — Getting started](https://reactnavigation.org/docs/getting-started)
+- [React Navigation — Deep linking](https://reactnavigation.org/docs/deep-linking)
+- [Android — Navigation component](https://developer.android.com/guide/navigation)

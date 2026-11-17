@@ -68,3 +68,8 @@ O modelo mental é o mesmo: **UI é função de estado**, componentes são funç
 - [ ] SafeAreaView ≈ `WindowInsets`/edge-to-edge
 - [ ] KeyboardAvoidingView ≈ `adjustResize`/`imePadding`
 - [ ] Modal, StatusBar, TouchableOpacity vs Pressable
+
+## Referências oficiais
+
+- [React Native — Core Components and APIs](https://reactnative.dev/docs/components-and-apis)
+- [Android — Jetpack Compose](https://developer.android.com/develop/ui/compose)

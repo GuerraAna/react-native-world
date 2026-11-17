@@ -40,3 +40,9 @@ Pense na **Bridge** como um `Handler`/`Messenger` trocando JSON entre processos,
 - [ ] Como funciona o loop de render do Fabric
 - [ ] Hermes (engine JS) vs JVM/ART — garbage collection, startup
 - [ ] Quando a Bridge antiga ainda aparece (bibliotecas legadas)
+
+## Referências oficiais
+
+- [React Native — New Architecture](https://reactnative.dev/architecture/landing-page)
+- [Hermes Engine](https://hermesengine.dev/)
+- [Android — JNI tips](https://developer.android.com/training/articles/perf-jni)

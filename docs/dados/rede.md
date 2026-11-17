@@ -10,6 +10,8 @@ import TabItem from '@theme/TabItem';
 
 # Rede e HTTP
 
+Como o app fala com servidores: requisições HTTP, serialização de JSON e validação de dados — o equivalente do seu stack Retrofit + Moshi.
+
 ## Mapeamento
 
 | Android | React Native |
@@ -72,3 +74,9 @@ JSON em JS não tem garantia nenhuma — o Zod valida em runtime o que o Moshi/k
 - [ ] TanStack Query ≈ repository + cache + retry + stale-while-revalidate
 - [ ] WebSocket / SSE vs socket do OkHttp
 - [ ] Upload/download de arquivos (`FormData`, expo-file-system)
+
+## Referências oficiais
+
+- [React Native — Networking](https://reactnative.dev/docs/network)
+- [Zod](https://zod.dev/)
+- [MDN — Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)

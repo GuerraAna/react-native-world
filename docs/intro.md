@@ -46,3 +46,10 @@ Cada seção parte de um conceito que você já conhece do **Android/Kotlin** e 
 :::tip Convenção deste guia
 Sempre que houver um equivalente direto no mundo Android, ele aparecerá em uma caixa como esta, ou em abas comparativas **Kotlin | TypeScript**.
 :::
+
+## Referências oficiais
+
+- [React Native — Getting Started](https://reactnative.dev/docs/getting-started)
+- [Android Developers](https://developer.android.com/)
+- [Kotlin — Documentação](https://kotlinlang.org/docs/home.html)
+- [TypeScript — Documentação](https://www.typescriptlang.org/docs/)

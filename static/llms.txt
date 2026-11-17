@@ -1,0 +1,79 @@
+# React Native World
+
+> Documentação pessoal de estudos de React Native, escrita do ponto de vista de uma desenvolvedora Android nativa (Kotlin). Cada seção mapeia um conceito do Android/Kotlin para o equivalente em React Native, TypeScript e Web (Next.js). Três destinos de entrega: app nativo, navegador mobile e site.
+
+Site: https://guerraana.github.io/react-native-world/
+
+## Introdução
+
+- [Introdução](https://guerraana.github.io/react-native-world/docs/intro): Visão geral do guia e a organização por segmentos de estudo.
+
+## Fundamentos
+
+- [Arquitetura](https://guerraana.github.io/react-native-world/docs/fundamentos/arquitetura): Bridge vs Nova Arquitetura (JSI, Fabric, TurboModules, Codegen, Yoga) — analogia com JNI.
+- [Expo vs RN CLI](https://guerraana.github.io/react-native-world/docs/fundamentos/expo-vs-rn-cli): Caminho gerenciado (Expo/EAS/Prebuild) vs bare workflow.
+- [Metro Bundler](https://guerraana.github.io/react-native-world/docs/fundamentos/metro-bundler): O bundler/dev server do RN — analogia com Gradle e Apply Changes.
+
+## Linguagem: Kotlin → TypeScript
+
+- [Tipos e Null Safety](https://guerraana.github.io/react-native-world/docs/linguagem/tipos-e-null-safety): data class vs interface, optional chaining, nullish coalescing.
+- [Coroutines vs Async](https://guerraana.github.io/react-native-world/docs/linguagem/coroutines-vs-async): suspend/Flow/Dispatchers vs async/await/Promise/AbortController.
+- [Padrões e Estruturas](https://guerraana.github.io/react-native-world/docs/linguagem/padroes-e-estruturas): sealed class vs discriminated union, coleções, extension functions.
+
+## UI e Layout
+
+- [Componentes Básicos](https://guerraana.github.io/react-native-world/docs/ui/componentes-basicos): Tabela Views/Compose → componentes RN (View, Text, Pressable, TextInput).
+- [Flexbox (Yoga)](https://guerraana.github.io/react-native-world/docs/ui/flexbox-yoga): LinearLayout/ConstraintLayout → flexDirection, justifyContent, alignItems.
+- [Estilos e StyleSheet](https://guerraana.github.io/react-native-world/docs/ui/estilos-stylesheet): styles.xml/dimens/themes → StyleSheet.create e tokens de tema.
+- [Listas](https://guerraana.github.io/react-native-world/docs/ui/listas): RecyclerView/Adapter/DiffUtil → FlatList, FlashList, renderItem.
+- [Animações e Gestos](https://guerraana.github.io/react-native-world/docs/ui/animacoes-e-gestos): Animated, Reanimated (worklets na UI thread) e Gesture Handler vs MotionEvent.
+
+## Ciclo de Vida e Estado
+
+- [Ciclo de Vida](https://guerraana.github.io/react-native-world/docs/estado/ciclo-de-vida): onCreate/onResume/onDestroy vs mount/useEffect/AppState.
+- [Gerenciamento de Estado](https://guerraana.github.io/react-native-world/docs/estado/gerenciamento-de-estado): ViewModel/StateFlow vs useState, Zustand, Context, React Query.
+- [DI e Context](https://guerraana.github.io/react-native-world/docs/estado/di-e-contexto): Hilt/Koin vs Context API e providers.
+
+## Navegação
+
+- [React Navigation](https://guerraana.github.io/react-native-world/docs/navegacao/react-navigation): Intents/NavGraph vs Stack/Tab/Drawer, deep links, parâmetros tipados.
+
+## Dados
+
+- [Rede e HTTP](https://guerraana.github.io/react-native-world/docs/dados/rede): Retrofit/OkHttp/Moshi vs fetch/axios/Zod.
+- [Armazenamento Local](https://guerraana.github.io/react-native-world/docs/dados/armazenamento): SharedPreferences/DataStore/Room vs AsyncStorage/MMKV/SQLite/Realm.
+
+## Mundo Nativo
+
+- [TurboModules](https://guerraana.github.io/react-native-world/docs/nativo/turbo-modules): Módulos nativos em Kotlin chamados pelo JS — Codegen + JSI.
+- [Gradle e Builds](https://guerraana.github.io/react-native-world/docs/nativo/gradle-e-builds): A pasta android/ como projeto Gradle normal, autolinking, assinatura.
+- [APIs do Sistema](https://guerraana.github.io/react-native-world/docs/nativo/apis-do-sistema): Acessibilidade, Linking, permissões, NetInfo, sensores.
+
+## Tooling e Qualidade
+
+- [Debugging](https://guerraana.github.io/react-native-world/docs/tooling/debugging): Logcat/breakpoints/inspector vs DevTools, LogBox, adb logcat.
+- [Testes](https://guerraana.github.io/react-native-world/docs/tooling/testes): JUnit/Espresso/Robolectric vs Jest/RNTL/Maestro/Detox.
+- [Por Plataforma](https://guerraana.github.io/react-native-world/docs/tooling/codigo-por-plataforma): Platform.OS, arquivos .android.tsx/.ios.tsx, permissões.
+
+## RN na Web
+
+- [Mapa dos Destinos](https://guerraana.github.io/react-native-world/docs/web/mapa-dos-destinos): Um código, três destinos — app nativo, navegador mobile e site. Tabela-mestra.
+- [React Native Web](https://guerraana.github.io/react-native-world/docs/web/react-native-web): View/Text → DOM, o que funciona e o que não, expo start --web.
+- [WebView e Navegadores](https://guerraana.github.io/react-native-world/docs/web/webview-e-navegadores): WebView nativa/JavascriptInterface vs react-native-webview/postMessage.
+- [Next.js Fundamentos](https://guerraana.github.io/react-native-world/docs/web/nextjs-fundamentos): App Router, rotas por arquivo, server vs client components.
+- [SSR / SSG / CSR](https://guerraana.github.io/react-native-world/docs/web/renderizacao-ssr-ssg): Estratégias de renderização e hidratação na web.
+- [Projeto Universal](https://guerraana.github.io/react-native-world/docs/web/projeto-universal): Monorepo app RN + site Next.js com Solito/Tamagui.
+- [Navegação e Links](https://guerraana.github.io/react-native-world/docs/web/navegacao-e-links): React Navigation vs App Router; deep links e App Links ↔ URLs.
+- [Deploy e PWA](https://guerraana.github.io/react-native-world/docs/web/deploy-e-pwa): Build web, Vercel/hosting, PWA instalável e SEO.
+
+## Fontes oficiais
+
+- React Native: https://reactnative.dev/docs/getting-started
+- React: https://react.dev/
+- Next.js: https://nextjs.org/docs
+- Android: https://developer.android.com/
+- Kotlin: https://kotlinlang.org/docs/home.html
+- TypeScript: https://www.typescriptlang.org/docs/
+- React Navigation: https://reactnavigation.org/docs/getting-started
+- Expo: https://docs.expo.dev/
+- React Native Web: https://necolas.github.io/react-native-web/

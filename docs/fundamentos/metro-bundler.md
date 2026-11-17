@@ -38,3 +38,8 @@ Só rebuilda o `android/` quando mexer em: dependências nativas, `AndroidManife
 - [ ] Hermes bytecode em release (bundle virá pré-compilado)
 - [ ] Source maps e debugging via Metro
 - [ ] `npx react-native start --reset-cache` — o "clean project" do RN
+
+## Referências oficiais
+
+- [Metro Bundler](https://metrobundler.dev/)
+- [React Native — Fast Refresh](https://reactnative.dev/docs/fast-refresh)

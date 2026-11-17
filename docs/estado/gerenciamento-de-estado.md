@@ -76,3 +76,9 @@ Um selector de Zustand `useUserStore((s) => s.user)` é como `stateFlow.map { it
 - [ ] Redux Toolkit vs Zustand — quando cada um
 - [ ] React Query/TanStack Query ≈ camada de repository com cache
 - [ ] Por que Context **não** é gerenciador de estado de alta frequência
+
+## Referências oficiais
+
+- [React — Managing State](https://react.dev/learn)
+- [Zustand — Documentação](https://docs.pmnd.rs/zustand)
+- [TanStack Query](https://tanstack.com/query/latest)

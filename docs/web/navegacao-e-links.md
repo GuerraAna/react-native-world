@@ -117,3 +117,9 @@ router.push('/detalhe/42');                   // app: navigate | web: router.pus
 - [ ] Universal links iOS + App Links Android no mesmo domínio
 - [ ] `router.replace()` vs `router.push()` (semelhante a flags de Intent)
 - [ ] Estado de navegação web: scroll restoration, `shallow` routing
+
+## Referências oficiais
+
+- [React Navigation — Deep linking](https://reactnavigation.org/docs/deep-linking)
+- [Next.js — Routing](https://nextjs.org/docs/app/building-your-application/routing)
+- [Android — App Links](https://developer.android.com/training/app-links)

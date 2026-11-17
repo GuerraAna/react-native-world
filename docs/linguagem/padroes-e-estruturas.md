@@ -78,3 +78,8 @@ function handle(r: Result) {
 
 - [ ] `var`/`val` → `let`/`const` (e por que `var` de JS é evitado)
 - [ ] Imutabilidade: `Object.freeze`, spread patterns
+
+## Referências oficiais
+
+- [Kotlin — Sealed classes](https://kotlinlang.org/docs/sealed-classes.html)
+- [TypeScript — Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html)

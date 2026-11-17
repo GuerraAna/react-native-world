@@ -10,6 +10,8 @@ import TabItem from '@theme/TabItem';
 
 # Listas
 
+Listas roláveis com reciclagem de itens — o `RecyclerView` do React Native, com os mesmos conceitos de adapter, view holder e diff.
+
 ## Mapeamento
 
 | RecyclerView | FlatList |
@@ -70,3 +72,9 @@ recyclerView.adapter = UserAdapter()
 - [ ] `SectionList` ≈ RecyclerView com headers sticky
 - [ ] `getItemLayout` para pular medida (≈ fixed size no RV)
 - [ ] `estimatedItemSize` no FlashList
+
+## Referências oficiais
+
+- [React Native — FlatList](https://reactnative.dev/docs/flatlist)
+- [Shopify — FlashList](https://shopify.github.io/flash-list/)
+- [React Native — Optimizing FlatList](https://reactnative.dev/docs/optimizing-flatlist-configuration)

@@ -73,3 +73,9 @@ const styles = StyleSheet.create({
 - [ ] Dark mode: `useColorScheme()` ≈ `values-night/`
 - [ ] `Dimensions`/`useWindowDimensions` ≈ `Configuration.screenWidthDp`
 - [ ] Libs de estilo: NativeWind (≈ Tailwind), styled-components, Unistyles
+
+## Referências oficiais
+
+- [React Native — Style](https://reactnative.dev/docs/style)
+- [React Native — StyleSheet](https://reactnative.dev/docs/stylesheet)
+- [React Native — useColorScheme](https://reactnative.dev/docs/usecolorscheme)

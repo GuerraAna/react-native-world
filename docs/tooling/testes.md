@@ -7,6 +7,8 @@ description: JUnit/Espresso/Robolectric vs Jest/RNTL/Maestro
 
 # Testes
 
+As mesmas três camadas de teste que você já conhece (unitário, componente, E2E), com as ferramentas do ecossistema JS.
+
 ## Mapeamento por camada
 
 | Android | React Native | Camada |
@@ -41,3 +43,10 @@ RNTL tem a mesma filosofia do Espresso/Compose Test: **testar pelo que o usuári
 - [ ] Mockar nativos: `jest.mock('react-native-mmkv')` ≈ mockar dependências Android
 - [ ] Snapshot tests: quando ajudam e quando viram ruído
 - [ ] CI: rodar Maestro em emulador no GitHub Actions
+
+## Referências oficiais
+
+- [Jest](https://jestjs.io/)
+- [React Native Testing Library](https://callstack.github.io/react-native-testing-library/)
+- [Maestro](https://docs.maestro.dev/)
+- [Detox](https://wix.github.io/Detox/)

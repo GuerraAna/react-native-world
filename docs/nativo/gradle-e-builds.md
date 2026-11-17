@@ -44,3 +44,8 @@ ProGuard/R8 (`proguard-rules.pro` existe e importa para código nativo de libs),
 - [ ] `react-native.config.js` e casos que exigem link manual
 - [ ] Hermes vs JSC: stack traces, bytecode, `vm` flag
 - [ ] App size: splits por ABI (`enableSeparateBuildPerCPUArchitecture`)
+
+## Referências oficiais
+
+- [React Native — Publishing to Google Play Store](https://reactnative.dev/docs/signed-apk-android)
+- [Android — Configure your build](https://developer.android.com/build)

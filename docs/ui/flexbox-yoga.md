@@ -44,3 +44,8 @@ No Android você escolhe o **container** (`LinearLayout`, `ConstraintLayout`, `F
 - [ ] `gap` (substitui margin em filhos) ≈ `Arrangement.spacedBy`
 - [ ] `position: 'absolute'` + zIndex ≈ `FrameLayout`/elevation
 - [ ] `flexWrap` para layouts que quebram linha
+
+## Referências oficiais
+
+- [React Native — Layout with Flexbox](https://reactnative.dev/docs/flexbox)
+- [MDN — CSS Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)

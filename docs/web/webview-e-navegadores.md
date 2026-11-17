@@ -94,3 +94,9 @@ Detalhe que dev Android às vezes esquece: o navegador mobile **é um destino de
 - [ ] `window.ReactNativeWebView` — detecção de "estou dentro de um app"
 - [ ] Cookies/sessão compartilhados entre WebView e app
 - [ ] `expo-web-browser` (Custom Tabs/SafariVC) para auth OAuth
+
+## Referências oficiais
+
+- [react-native-webview](https://github.com/react-native-webview/react-native-webview)
+- [Android — WebView](https://developer.android.com/develop/ui/views/layout/webview/webview)
+- [React Native — Linking](https://reactnative.dev/docs/linking)

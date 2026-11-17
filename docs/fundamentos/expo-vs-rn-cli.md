@@ -42,3 +42,9 @@ Vai embutir RN num app Android existente?   → Bare (Integration with Existing 
 
 - [ ] Development builds do Expo vs Expo Go
 - [ ] Config plugins (≈ plugins do Gradle que mexem no manifest)
+
+## Referências oficiais
+
+- [Expo — Documentação](https://docs.expo.dev/)
+- [React Native — Environment Setup](https://reactnative.dev/docs/environment-setup)
+- [Expo — Prebuild](https://docs.expo.dev/workflow/prebuild/)

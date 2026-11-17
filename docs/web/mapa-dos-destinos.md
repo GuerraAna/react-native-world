@@ -67,3 +67,9 @@ Este segmento cobre as três, na ordem: primeiro o motor (RN Web), depois a pont
 - [ ] No seu caso real: qual dos 3 destinos faz sentido primeiro?
 - [ ] SEO importa? (se sim → Next.js; se não → RN Web pode bastar)
 - [ ] Quanto da UI atual depende de API de device?
+
+## Referências oficiais
+
+- [React Native](https://reactnative.dev/)
+- [Next.js — Documentação](https://nextjs.org/docs)
+- [Android Developers](https://developer.android.com/)

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://guerraana.github.io/react-native-world/sitemap.xml

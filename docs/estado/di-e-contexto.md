@@ -68,3 +68,8 @@ export function useRepo() {
 
 - [ ] `React.FC<PropsWithChildren>` e composição de providers
 - [ ] Libs de DI se quiser a experiência Koin: `tsyringe`, `inversify`
+
+## Referências oficiais
+
+- [React — useContext](https://react.dev/reference/react/useContext)
+- [React — Passing Data Deeply with Context](https://react.dev/learn/passing-data-deeply-with-context)

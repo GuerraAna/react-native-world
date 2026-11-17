@@ -81,3 +81,8 @@ const size = user.email?.length ?? 0;
 - [ ] `type` vs `interface` — quando usar cada
 - [ ] `unknown` vs `Any?`
 - [ ] Generics: `List<T>` vs `Array<T>`/`T[]`
+
+## Referências oficiais
+
+- [TypeScript — Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- [Kotlin — Null safety](https://kotlinlang.org/docs/null-safety.html)

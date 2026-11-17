@@ -108,3 +108,9 @@ Se for só "quero o app no browser", `expo start --web` resolve sem monorepo.
 - [ ] Tamagui config — como os tokens viram CSS vars no web
 - [ ] Quando um componente vira `.native.tsx` vs `.web.tsx` (APIs de device)
 - [ ] Build do monorepo — Turborepo tasks, `yarn workspaces`
+
+## Referências oficiais
+
+- [Solito](https://solito.dev/)
+- [Tamagui](https://tamagui.dev/)
+- [Turborepo](https://turbo.build/repo/docs)

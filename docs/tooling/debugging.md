@@ -7,6 +7,8 @@ description: Logcat, breakpoints e profiling no mundo RN
 
 # Debugging
 
+Ferramentas para enxergar o que o app está fazendo — os equivalentes do Logcat, breakpoints, Layout Inspector e Network Profiler.
+
 ## Mapeamento de ferramentas
 
 | Android | React Native |
@@ -38,3 +40,8 @@ Crashes nativos (de libs, TurboModules) aparecem como stack traces Java/Kotlin n
 - [ ] Performance: `Perf Monitor` no dev menu (FPS JS vs UI)
 - [ ] React DevTools Profiler ≈ Compose Layout Inspector/recomposition counts
 - [ ] Debug release build: `variant.release` no device
+
+## Referências oficiais
+
+- [React Native — Debugging](https://reactnative.dev/docs/debugging)
+- [React DevTools](https://react.dev/learn/react-developer-tools)

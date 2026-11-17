@@ -93,3 +93,9 @@ A extensão `.native.tsx` é o "tudo menos web" — útil quando o app roda no b
 - [ ] `Platform.OS === 'web'` existe? (sim — verificar no código)
 - [ ] Quais libs do projeto têm suporte web? Checar `package.json`/`react-native-web` compat
 - [ ] Limitações de gestos/touch no browser (react-native-gesture-handler web)
+
+## Referências oficiais
+
+- [React Native Web — Documentação](https://necolas.github.io/react-native-web/)
+- [Expo — Run in web browser](https://docs.expo.dev/workflow/web/)
+- [React Native — Platform Specific Code](https://reactnative.dev/docs/platform-specific-code)

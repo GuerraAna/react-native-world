@@ -4,7 +4,12 @@ import {
   useNavbarMobileSidebar,
   useNavbarSecondaryMenu,
 } from '@docusaurus/theme-common/internal';
-import NavbarItem from '@theme/NavbarItem';
+import NavbarItem, {type Props as NavbarItemConfig} from '@theme/NavbarItem';
+
+function useNavbarItems() {
+  // TODO temporary casting until ThemeConfig type is improved
+  return useThemeConfig().navbar.items as NavbarItemConfig[];
+}
 
 // Painel secundário do drawer: itens da navbar no topo + divider +
 // conteúdo contextual (sidebar da doc). Assim, links como GitHub e o
@@ -12,7 +17,7 @@ import NavbarItem from '@theme/NavbarItem';
 export default function NavbarMobileSidebarSecondaryMenu(): ReactNode {
   const mobileSidebar = useNavbarMobileSidebar();
   const secondaryMenu = useNavbarSecondaryMenu();
-  const items = useThemeConfig().navbar.items;
+  const items = useNavbarItems();
 
   return (
     <>

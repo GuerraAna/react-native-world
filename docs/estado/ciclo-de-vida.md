@@ -81,3 +81,9 @@ Dentro do `useEffect`, valores capturados ficam "congelados" naquele render — 
 
 - [ ] `useFocusEffect` do React Navigation ≈ onResume por **tela** (não por app)
 - [ ] "Tela ao fundo não desmonta" — stack mantém telas vivas, diferente de Activity destruída
+
+## Referências oficiais
+
+- [React Native — AppState](https://reactnative.dev/docs/appstate)
+- [React — useEffect](https://react.dev/reference/react/useEffect)
+- [React Navigation — useFocusEffect](https://reactnavigation.org/docs/use-focus-effect/)

@@ -68,3 +68,8 @@ Permissões Android funcionam **exatamente como você conhece** — o `AndroidMa
 - [ ] `Platform.Version` (Android API level) vs `Build.VERSION.SDK_INT`
 - [ ] Estilos por plataforma: `Platform.select` em StyleSheet
 - [ ] `.native.tsx` (RN mas não web) quando o app também roda no web
+
+## Referências oficiais
+
+- [React Native — Platform Specific Code](https://reactnative.dev/docs/platform-specific-code)
+- [React Native — PermissionsAndroid](https://reactnative.dev/docs/permissionsandroid)

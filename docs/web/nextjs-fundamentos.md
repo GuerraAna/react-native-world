@@ -114,3 +114,13 @@ npm run dev   # → http://localhost:3000
 - [ ] `loading.tsx` / `error.tsx` — convenções de UI de estado por rota
 - [ ] Route Groups `(pasta)` — organiza sem afetar a URL
 - [ ] `generateStaticParams` ≈ "build variants" por rota
+- [ ] **Server Actions** — funções que rodam no servidor chamadas do cliente (≈ endpoint sem escrever API)
+- [ ] **Route Handlers** (`route.ts`) — API endpoints dentro do Next (≈ seu próprio backend)
+- [ ] `next/image` e `next/font` — otimização automática de assets
+- [ ] `middleware.ts` — intercepta requests (≈ OkHttp interceptor no servidor)
+
+## Referências oficiais
+
+- [Next.js — Documentação](https://nextjs.org/docs)
+- [Next.js — Learn (curso oficial)](https://nextjs.org/learn)
+- [Next.js — App Router](https://nextjs.org/docs/app)
