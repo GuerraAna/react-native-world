@@ -78,6 +78,13 @@ const segments: Segment[] = [
     androidEquivalent: 'Logcat · JUnit · Espresso',
     description: 'Debug, testes e código específico por plataforma.',
   },
+  {
+    level: 'LVL 09',
+    title: 'RN na Web',
+    to: '/docs/web',
+    androidEquivalent: 'WebView · App Links',
+    description: 'App + navegador + site: um código, três destinos (Next.js).',
+  },
 ];
 
 const RAY_COUNT = 72;

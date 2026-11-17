@@ -41,6 +41,7 @@ Cada seção parte de um conceito que você já conhece do **Android/Kotlin** e 
 | Dados | Retrofit/Room/SharedPreferences |
 | Mundo Nativo | Seu superpoder: TurboModules em Kotlin |
 | Tooling | Logcat, JUnit, Espresso |
+| RN na Web | WebView/App Links → app + navegador + site (Next.js) |
 
 :::tip Convenção deste guia
 Sempre que houver um equivalente direto no mundo Android, ele aparecerá em uma caixa como esta, ou em abas comparativas **Kotlin | TypeScript**.

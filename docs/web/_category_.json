@@ -1,0 +1,10 @@
+{
+  "label": "🌐 RN na Web",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "title": "RN na Web",
+    "description": "Um código, três destinos: app nativo, navegador mobile e site com Next.js.",
+    "slug": "/web"
+  }
+}
