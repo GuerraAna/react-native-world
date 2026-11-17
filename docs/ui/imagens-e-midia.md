@@ -30,7 +30,7 @@ import TabItem from '@theme/TabItem';
 ```
 
 :::warning require não é dinâmico
-`require(`./img/${name}.png`)` **não funciona** — o bundler resolve requires estaticamente. É o mesmo motivo pelo qual `R.drawable` usa IDs gerados: o recurso precisa existir em build time. Pra imagens dinâmicas locais, faça um mapa: `const imgs = {logo: require('./logo.png')}`.
+`require('./img/' + name + '.png')` **não funciona** — o bundler resolve requires estaticamente. É o mesmo motivo pelo qual `R.drawable` usa IDs gerados: o recurso precisa existir em build time. Pra imagens dinâmicas locais, faça um mapa: `const imgs = {logo: require('./logo.png')}`.
 :::
 
 ## resizeMode ≈ scaleType
