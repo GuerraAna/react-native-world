@@ -47,6 +47,20 @@ Cada seção parte de um conceito que você já conhece do **Android/Kotlin** e 
 Sempre que houver um equivalente direto no mundo Android, ele aparecerá em uma caixa como esta, ou em abas comparativas **Kotlin | TypeScript**.
 :::
 
+## Versões e contexto
+
+Este guia foi escrito e revisado em **novembro de 2025**, cobrindo:
+
+- **React Native** 0.76+ (Nova Arquitetura como padrão — JSI, Fabric, TurboModules)
+- **Expo** SDK 52+
+- **Next.js** 15+ (App Router, Server Actions estáveis)
+- **Docusaurus** 3.x (este site)
+- **TypeScript** 5.x
+
+:::note Atualização do ecossistema
+O RN e o Next evoluem rápido — os conceitos mapeados aqui são estáveis, mas APIs específicas podem ter mudado. Sempre confira a versão atual nas [referências oficiais](#referências-oficiais).
+:::
+
 ## Referências oficiais
 
 - [React Native — Getting Started](https://reactnative.dev/docs/getting-started)

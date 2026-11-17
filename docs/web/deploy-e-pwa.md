@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 9
 title: Deploy e PWA
 sidebar_label: 🚀 Deploy e PWA
 description: Build web, Vercel/hosting, PWA instalável e SEO — a "Play Store" da web

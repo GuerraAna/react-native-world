@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 title: Projeto Universal
 sidebar_label: 📦 Projeto Universal
 description: Um monorepo, duas saídas — app RN e site Next.js compartilhando código

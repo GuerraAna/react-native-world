@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 8
 title: Navegação e Links
 sidebar_label: 🧭 Navegação e Links
 description: React Navigation vs App Router, deep links e App Links — o mapeamento mais bonito

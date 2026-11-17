@@ -27,6 +27,7 @@ Site: https://guerraana.github.io/react-native-world/
 - [Estilos e StyleSheet](https://guerraana.github.io/react-native-world/docs/ui/estilos-stylesheet): styles.xml/dimens/themes → StyleSheet.create e tokens de tema.
 - [Listas](https://guerraana.github.io/react-native-world/docs/ui/listas): RecyclerView/Adapter/DiffUtil → FlatList, FlashList, renderItem.
 - [Animações e Gestos](https://guerraana.github.io/react-native-world/docs/ui/animacoes-e-gestos): Animated, Reanimated (worklets na UI thread) e Gesture Handler vs MotionEvent.
+- [Imagens e Mídia](https://guerraana.github.io/react-native-world/docs/ui/imagens-e-midia): drawable/Glide vs Image require/uri, resizeMode≈scaleType, assets e fontes.
 
 ## Ciclo de Vida e Estado
 
@@ -42,18 +43,22 @@ Site: https://guerraana.github.io/react-native-world/
 
 - [Rede e HTTP](https://guerraana.github.io/react-native-world/docs/dados/rede): Retrofit/OkHttp/Moshi vs fetch/axios/Zod.
 - [Armazenamento Local](https://guerraana.github.io/react-native-world/docs/dados/armazenamento): SharedPreferences/DataStore/Room vs AsyncStorage/MMKV/SQLite/Realm.
+- [TanStack Query](https://guerraana.github.io/react-native-world/docs/dados/tanstack-query): Client vs server state, useQuery/useMutation, cache e invalidação — Repository+Flow.
 
 ## Mundo Nativo
 
 - [TurboModules](https://guerraana.github.io/react-native-world/docs/nativo/turbo-modules): Módulos nativos em Kotlin chamados pelo JS — Codegen + JSI.
 - [Gradle e Builds](https://guerraana.github.io/react-native-world/docs/nativo/gradle-e-builds): A pasta android/ como projeto Gradle normal, autolinking, assinatura.
 - [APIs do Sistema](https://guerraana.github.io/react-native-world/docs/nativo/apis-do-sistema): Acessibilidade, Linking, permissões, NetInfo, sensores.
+- [Fabric Components](https://guerraana.github.io/react-native-world/docs/nativo/fabric-components): View nativa customizada exposta ao JS — ViewManager e codegenNativeComponent.
+- [Notificações e Background](https://guerraana.github.io/react-native-world/docs/nativo/notificacoes-e-background): FCM/push, canais, Headless JS e trabalho em background vs WorkManager.
 
 ## Tooling e Qualidade
 
 - [Debugging](https://guerraana.github.io/react-native-world/docs/tooling/debugging): Logcat/breakpoints/inspector vs DevTools, LogBox, adb logcat.
 - [Testes](https://guerraana.github.io/react-native-world/docs/tooling/testes): JUnit/Espresso/Robolectric vs Jest/RNTL/Maestro/Detox.
 - [Por Plataforma](https://guerraana.github.io/react-native-world/docs/tooling/codigo-por-plataforma): Platform.OS, arquivos .android.tsx/.ios.tsx, permissões.
+- [Performance](https://guerraana.github.io/react-native-world/docs/tooling/performance): Perf Monitor (UI vs JS FPS), Hermes profiling, bundle size vs Android Profiler/Systrace.
 
 ## RN na Web
 
@@ -61,6 +66,7 @@ Site: https://guerraana.github.io/react-native-world/
 - [React Native Web](https://guerraana.github.io/react-native-world/docs/web/react-native-web): View/Text → DOM, o que funciona e o que não, expo start --web.
 - [WebView e Navegadores](https://guerraana.github.io/react-native-world/docs/web/webview-e-navegadores): WebView nativa/JavascriptInterface vs react-native-webview/postMessage.
 - [Next.js Fundamentos](https://guerraana.github.io/react-native-world/docs/web/nextjs-fundamentos): App Router, rotas por arquivo, server vs client components.
+- [Server Actions e Dados](https://guerraana.github.io/react-native-world/docs/web/server-actions-e-dados): fetch em Server Components, cache/revalidate, Server Actions e Route Handlers.
 - [SSR / SSG / CSR](https://guerraana.github.io/react-native-world/docs/web/renderizacao-ssr-ssg): Estratégias de renderização e hidratação na web.
 - [Projeto Universal](https://guerraana.github.io/react-native-world/docs/web/projeto-universal): Monorepo app RN + site Next.js com Solito/Tamagui.
 - [Navegação e Links](https://guerraana.github.io/react-native-world/docs/web/navegacao-e-links): React Navigation vs App Router; deep links e App Links ↔ URLs.

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 title: Renderização na Web
 sidebar_label: 🖥️ SSR / SSG / CSR
 description: Server-side rendering, geração estática e hidratação — ou "a tela já chega desenhada"

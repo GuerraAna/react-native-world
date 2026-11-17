@@ -26,7 +26,10 @@ npm run typecheck  # checa TS
 - Abas `<Tabs>`/`<TabItem>` para código comparativo Kotlin vs TypeScript
 - Callouts `:::tip Equivalente Android` para pontes mentais
 - Seção "O que anotar depois" ao final das páginas como checklist de estudo
+- Seção "Referências oficiais" ao final de TODA página com links canônicos
 - Front matter com dois-pontos no `title` precisa de aspas (YAML)
+- `static/llms.txt` = índice estruturado pra IAs — atualizar ao criar/mover página
+- `examples/` = código de referência dos docs (não executável), comentado
 
 ## Design (src/css/custom.css + src/pages/)
 
