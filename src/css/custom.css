@@ -94,21 +94,26 @@ body {
   gap: 0.6rem;
 }
 
-/* Abaixo de 1200px os itens saem da topbar e migram para o menu hamburger.
-   O drawer mobile (.navbar-sidebar) funciona em qualquer largura — basta
-   exibir o toggle. A busca permanece na topbar pois ainda cabe. */
-@media (max-width: 1200px) {
-  .navbar__items .navbar__item {
-    display: none;
+/* Faixa 997–1200px: o breakpoint mobile do Docusaurus é fixo em 996px
+   (JS + CSS), então o drawer ainda não existe — os itens precisam
+   CABER na topbar. Comprime links e busca nessa banda. */
+@media (min-width: 997px) and (max-width: 1200px) {
+  .navbar__items {
+    gap: 0.35rem;
   }
 
-  .navbar__toggle {
-    display: inherit;
+  .navbar__items .navbar__link {
+    padding: 0.4rem 0.55rem;
+    font-size: 0.72rem;
   }
 
   .navbar__search {
     min-width: 0;
     flex-shrink: 1;
+  }
+
+  .navbar__search-input {
+    width: 9rem;
   }
 }
 
@@ -288,6 +293,15 @@ body {
 /* Links da navbar dentro da sidebar: cor legível por tema */
 .navbar-sidebar .navbar__link {
   color: var(--ifm-navbar-link-color);
+}
+
+/* Divider entre os itens da navbar e o conteúdo da doc no menu mobile */
+.navbar-sidebar__divider {
+  height: 3px;
+  margin: 0.75rem 1rem;
+  border-radius: 2px;
+  background: var(--rn-transition-gradient);
+  opacity: 0.6;
 }
 
 /* Menu lateral mobile: mais respiro nos itens */

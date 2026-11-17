@@ -39,7 +39,7 @@ const OPTIONS: {value: Choice; label: string; icon: ReactNode}[] = [
   {value: null, label: 'Auto', icon: <AutoIcon />},
 ];
 
-export default function ColorModeDropdown(): ReactNode {
+export default function ColorModeDropdown({mobile}: {mobile?: boolean}): ReactNode {
   const {colorModeChoice, setColorMode} = useColorMode();
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
@@ -62,6 +62,32 @@ export default function ColorModeDropdown(): ReactNode {
   }, []);
 
   const current = OPTIONS.find((o) => o.value === colorModeChoice) ?? OPTIONS[2];
+
+  if (mobile) {
+    return (
+      <li className="menu__list-item">
+        <div className={styles.mobileRow}>
+          <span className={styles.mobileLabel}>Tema</span>
+          <div className={styles.mobileOptions}>
+            {OPTIONS.map((opt) => (
+              <button
+                key={opt.label}
+                type="button"
+                className={clsx(
+                  styles.mobileOption,
+                  opt.value === current.value && styles.mobileOptionActive,
+                )}
+                onClick={() => setColorMode(opt.value)}
+                aria-pressed={opt.value === current.value}>
+                <span className={styles.icon}>{opt.icon}</span>
+                {opt.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </li>
+    );
+  }
 
   return (
     <div ref={rootRef} className={clsx('navbar__item', styles.dropdown)}>
