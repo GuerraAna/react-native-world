@@ -56,11 +56,11 @@ type Acao = (dados: unknown) => unknown | Promise<unknown>;
 
 export function registrarAcoes(acoes: Record<string, Acao>) {
   // Android entrega mensagens no document; iOS no window
-  const alvo = typeof document !== 'undefined' ? document : window;
+  const alvo: EventTarget = typeof document !== 'undefined' ? document : window;
 
-  alvo.addEventListener('message', async (e: MessageEvent) => {
+  alvo.addEventListener('message', async (e: Event) => {
     try {
-      const {id, acao, dados} = JSON.parse(e.data);
+      const {id, acao, dados} = JSON.parse((e as MessageEvent).data);
       const resultado = await acoes[acao]?.(dados);
       window.ReactNativeWebView?.postMessage(JSON.stringify({id, resultado}));
     } catch (erro) {

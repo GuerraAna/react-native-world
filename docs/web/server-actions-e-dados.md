@@ -126,6 +126,7 @@ Quando usar: endpoints públicos pra terceiros, webhooks, ou quando o app RN tam
 
 ## O que anotar depois
 
+- [ ] `examples/next-app/` no repo — app Next.js **mínimo e que compila** (Server Components, Server Actions, Route Handler, rota dinâmica)
 - [ ] `cookies()`/`headers()` — acessar request data no servidor
 - [ ] Streaming com `Suspense` — partes da página chegam prontas
 - [ ] `useFormStatus`/`useActionState` — loading de Server Actions no cliente

@@ -28,6 +28,7 @@ Site: https://guerraana.github.io/react-native-world/
 - [Listas](https://guerraana.github.io/react-native-world/docs/ui/listas): RecyclerView/Adapter/DiffUtil → FlatList, FlashList, renderItem.
 - [Animações e Gestos](https://guerraana.github.io/react-native-world/docs/ui/animacoes-e-gestos): Animated, Reanimated (worklets na UI thread) e Gesture Handler vs MotionEvent.
 - [Imagens e Mídia](https://guerraana.github.io/react-native-world/docs/ui/imagens-e-midia): drawable/Glide vs Image require/uri, resizeMode≈scaleType, assets e fontes.
+- [Internacionalização](https://guerraana.github.io/react-native-world/docs/ui/internacionalizacao): strings.xml/values-pt vs i18n-js/expo-localization/next-intl, Intl API.
 
 ## Ciclo de Vida e Estado
 
@@ -59,6 +60,7 @@ Site: https://guerraana.github.io/react-native-world/
 - [Testes](https://guerraana.github.io/react-native-world/docs/tooling/testes): JUnit/Espresso/Robolectric vs Jest/RNTL/Maestro/Detox.
 - [Por Plataforma](https://guerraana.github.io/react-native-world/docs/tooling/codigo-por-plataforma): Platform.OS, arquivos .android.tsx/.ios.tsx, permissões.
 - [Performance](https://guerraana.github.io/react-native-world/docs/tooling/performance): Perf Monitor (UI vs JS FPS), Hermes profiling, bundle size vs Android Profiler/Systrace.
+- [CI/CD e Publicação](https://guerraana.github.io/react-native-world/docs/tooling/ci-cd): EAS Build/Submit, GitHub Actions, deploy web vs fastlane/Play Console.
 
 ## RN na Web
 
@@ -71,6 +73,15 @@ Site: https://guerraana.github.io/react-native-world/
 - [Projeto Universal](https://guerraana.github.io/react-native-world/docs/web/projeto-universal): Monorepo app RN + site Next.js com Solito/Tamagui.
 - [Navegação e Links](https://guerraana.github.io/react-native-world/docs/web/navegacao-e-links): React Navigation vs App Router; deep links e App Links ↔ URLs.
 - [Deploy e PWA](https://guerraana.github.io/react-native-world/docs/web/deploy-e-pwa): Build web, Vercel/hosting, PWA instalável e SEO.
+- [Autenticação](https://guerraana.github.io/react-native-world/docs/web/autenticacao): OAuth/sessões/tokens — Credential Manager vs expo-auth-session e Auth.js.
+
+## Exemplos verificáveis
+
+Código de referência citado nos docs, no repo:
+
+- [next-app](https://github.com/GuerraAna/react-native-world/tree/main/examples/next-app): App Next.js mínimo que compila — Server/Client Components, Server Actions, Route Handlers, rotas dinâmicas.
+- [webview-bridge](https://github.com/GuerraAna/react-native-world/tree/main/examples/webview-bridge): Ponte bidirecional app↔WebView (request/response com IDs) — typechecked.
+- [universal](https://github.com/GuerraAna/react-native-world/tree/main/examples/universal): Componente `.web`/`.native`, router Solito e Query compartilhada.
 
 ## Fontes oficiais
 

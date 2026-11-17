@@ -1,0 +1,16 @@
+{
+  "name": "rn-world-examples",
+  "private": true,
+  "description": "Typecheck dos exemplos standalone (webview bridge + data layer)",
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.62.0",
+    "react": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "typescript": "^5"
+  }
+}

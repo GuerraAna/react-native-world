@@ -104,6 +104,7 @@ Se for só "quero o app no browser", `expo start --web` resolve sem monorepo.
 
 ## O que anotar depois
 
+- [ ] `examples/universal/` no repo — código de referência verificável (Button `.web`/`.native`, router Solito, Query compartilhada)
 - [ ] Rodar `create-solito-app` e ver a estrutura real
 - [ ] Tamagui config — como os tokens viram CSS vars no web
 - [ ] Quando um componente vira `.native.tsx` vs `.web.tsx` (APIs de device)

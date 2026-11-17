@@ -151,6 +151,7 @@ Detalhe que dev Android às vezes esquece: o navegador mobile **é um destino de
 
 ## O que anotar depois
 
+- [ ] `examples/webview-bridge/bridge.ts` no repo — ponte request/response completa e **typechecked**
 - [ ] `injectedJavaScript` vs `injectedJavaScriptBeforeContentLoaded`
 - [ ] `window.ReactNativeWebView` — detecção de "estou dentro de um app"
 - [ ] Cookies/sessão compartilhados entre WebView e app
