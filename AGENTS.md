@@ -37,3 +37,24 @@ npm run typecheck  # checa TS
 - Cuidado: `.navbar { color: #fff }` herda para `.navbar-sidebar` — cores da
   sidebar mobile precisam de override explícito (ver seção mobile no CSS)
 - Todo elemento novo precisa funcionar nos dois temas (light e dark)
+
+## Pegadinhas responsivas (aprendidas em 2026-11)
+
+- O breakpoint mobile do Docusaurus é fixo em **996px no JS e no CSS**
+  (`useWindowSize`) — o drawer `.navbar-sidebar` NÃO renderiza acima disso.
+  Não dá pra antecipar o hamburger com CSS; a faixa 997–1200px precisa
+  COMPRIMIR os itens para caberem.
+- Especificidade: `.navbar__items .navbar__link{display:inline-flex}` (0-2-0)
+  sobrescreve o `.navbar__item{display:none}` nativo (0-1-0) — links ficavam
+  visíveis no mobile. O hide é reforçado com seletor mais específico
+  (`.navbar .navbar__items .navbar__item`) no bloco `@media (max-width:996px)`.
+- Plugin de busca: ≤576px o input colapsa num botão-ícone (expande no focus).
+  Não esconder o `svg` da lupa nessa faixa — senão vira uma caixa vazia.
+  O container fica `position:absolute` na direita: reservar espaço em
+  `.navbar__items--right` para não sobrepor o título.
+- Dois glows radiais no hero (`::before`/`::after`) criam "costura" vertical
+  visível — usar um único `linear-gradient` cobrindo o hero.
+- Validar mobile com Playwright real (`devices['Pixel 7']`,
+  `devices['iPhone SE']`) — Edge headless força viewport mínimo ~477px.
+- swizzle usado: `src/theme/Navbar/MobileSidebar/SecondaryMenu` injeta os
+  itens da navbar no topo do drawer + `.navbar-sidebar__divider`.

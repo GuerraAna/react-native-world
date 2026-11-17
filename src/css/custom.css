@@ -94,6 +94,59 @@ body {
   gap: 0.6rem;
 }
 
+/* Restaura o hide nativo dos itens no mobile: nossa regra
+   .navbar__items .navbar__link (especificidade 0-2-0) sobrescrevia
+   o .navbar__item{display:none} do Docusaurus (0-1-0) e os links
+   continuavam visíveis/empilhados na topbar em telas pequenas.
+   Seletor com especificidade maior garante o hide. */
+@media (max-width: 996px) {
+  .navbar .navbar__items .navbar__item {
+    display: none;
+  }
+
+  /* O título precisa poder encolher (ellipsis) em vez de
+     ser coberto pela busca absoluta na direita */
+  .navbar__items {
+    min-width: 0;
+  }
+
+  .navbar__brand {
+    min-width: 0;
+  }
+
+  /* A busca fica position:absolute na direita (fora do fluxo).
+     ≤576px o plugin a colapsa num botão-ícone — reservar só o
+     espaço dele para o título não ser espremido */
+  .navbar__items--right {
+    min-width: 3.5rem;
+    flex: 0 0 auto;
+  }
+
+  .navbar__search {
+    color: #fff;
+  }
+
+  .navbar__search-input {
+    color: #fff;
+  }
+
+  .navbar__search-input::placeholder {
+    color: rgba(255, 255, 255, 0.65);
+  }
+}
+
+/* 577–996px: o plugin mantém o input expandido — reservar o
+   espaço real da busca para não sobrepor o título */
+@media (min-width: 577px) and (max-width: 996px) {
+  .navbar__items--right {
+    min-width: min(11rem, 40vw);
+  }
+
+  .navbar__search-input {
+    width: min(9rem, 38vw);
+  }
+}
+
 /* Faixa 997–1200px: o breakpoint mobile do Docusaurus é fixo em 996px
    (JS + CSS), então o drawer ainda não existe — os itens precisam
    CABER na topbar. Comprime links e busca nessa banda. */
@@ -202,13 +255,16 @@ body {
   outline: none;
 }
 
-/* Ícones extras da busca (lupa, hints ⌘K) — dispensáveis, input limpo */
-.navbar__search > svg {
-  display: none;
-}
+/* Ícones extras da busca (lupa, hints ⌘K) — dispensáveis no desktop,
+   mas ≤576px a lupa é a affordance do input colapsado do plugin */
+@media (min-width: 577px) {
+  .navbar__search > svg {
+    display: none;
+  }
 
-.navbar__search kbd {
-  display: none;
+  .navbar__search kbd {
+    display: none;
+  }
 }
 
 /* Modal de resultados da busca no tema escuro do site */
